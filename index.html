@@ -7,11 +7,12 @@
 <style>
 /* Couleurs : une couleur par podcast (--c-ID) et la couleur du texte des boutons (--k-ID), pour chaque thème.
    Pour un nouveau podcast : ajouter --c-ID et --k-ID dans les 3 blocs ci-dessous, puis une ligne :root[data-podcast="ID"] plus bas. */
-:root{--bg:#eef0f3;--card:#fff;--ink:#14161a;--mute:#5d6470;--line:#d9dde3;--c-2hdp:#e0a000;--c-barre:#e8700a;--c-favs:#7c4dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-favs:#fff;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-favs:#14161a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-favs:#14161a;color-scheme:dark}
+:root{--bg:#eef0f3;--card:#fff;--ink:#14161a;--mute:#5d6470;--line:#d9dde3;--c-2hdp:#e0a000;--c-barre:#e8700a;--c-lompret:#0b7f73;--c-favs:#7c4dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#fff;--k-favs:#fff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#2dd4bf;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#2dd4bf;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}
 :root,:root[data-podcast="2hdp"]{--acc:var(--c-2hdp);--accink:var(--k-2hdp)}
 :root[data-podcast="barre"]{--acc:var(--c-barre);--accink:var(--k-barre)}
+:root[data-podcast="lompret"]{--acc:var(--c-lompret);--accink:var(--k-lompret)}
 :root[data-podcast="favs"]{--acc:var(--c-favs);--accink:var(--k-favs)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif}
@@ -464,7 +465,16 @@ const PODCASTS=[
   feed:"https://podcasts.nova.fr/radio-nova-la-chronique-de-pierre-emmanuel-barre/feed/rss/website.xml",
   auto:true, // vérifie automatiquement les nouveaux épisodes à l’ouverture de la page
   ph:"Ex : Macron, grève, 2026…",
-  dirRe:null, strip:/\s*-\s*La (?:chronique|grosse semaine) de Pierre-Emmanuel Barré.*$/i, raw:""}
+  dirRe:null, strip:/\s*-\s*La (?:chronique|grosse semaine) de Pierre-Emmanuel Barré.*$/i, raw:""},
+ {id:"lompret",name:"La chronique d’Aymeric Lompret",short:"Aymeric Lompret",initials:"AL",
+  sub:"Sur Radio Nova",
+  logo:"",
+  base:"",
+  page:"https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret",
+  feed:"https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret/feed/rss/website.xml", // à vérifier : adresse du flux RSS
+  auto:true,
+  ph:"Ex : Cannes, Macron, 2026…",
+  dirRe:null, strip:/\s*-\s*La chronique d['’]Aymeric Lompret.*$/i, raw:""}
 ];
 const FAVS_TAB={name:"Mes favoris",sub:"Tes épisodes préférés, tous podcasts confondus",initials:"★",ph:"Rechercher dans tes favoris…"};
 
