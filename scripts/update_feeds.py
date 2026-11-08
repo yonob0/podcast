@@ -16,6 +16,13 @@ PODCASTS = [
         "strip": r"\s*-\s*La (?:chronique|grosse semaine) de Pierre-Emmanuel Barré.*$",
         "dir_re": None,
     },
+    {
+        "id": "lompret",
+        "feed": "https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret/feed/rss/website.xml",
+        "page": "https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret",
+        "strip": r"\s*-\s*La chronique d['’]Aymeric Lompret.*$",
+        "dir_re": None,
+    },
 ]
 
 
