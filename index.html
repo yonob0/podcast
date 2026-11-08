@@ -7,9 +7,9 @@
 <style>
 /* Couleurs : une couleur par podcast (--c-ID) et la couleur du texte des boutons (--k-ID), pour chaque thème.
    Pour un nouveau podcast : ajouter --c-ID et --k-ID dans les 3 blocs ci-dessous, puis une ligne :root[data-podcast="ID"] plus bas. */
-:root{--bg:#eef0f3;--card:#fff;--ink:#14161a;--mute:#5d6470;--line:#d9dde3;--c-2hdp:#e0a000;--c-barre:#e8700a;--c-lompret:#0b7f73;--c-favs:#7c4dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#fff;--k-favs:#fff;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#2dd4bf;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#2dd4bf;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}
+:root{--bg:#eef0f3;--card:#fff;--ink:#14161a;--mute:#5d6470;--line:#d9dde3;--c-2hdp:#e0a000;--c-barre:#e8700a;--c-lompret:#e8700a;--c-favs:#7c4dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#fff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#ff9a2e;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--ink:#eceef1;--mute:#9aa1ad;--line:#2b3038;--c-2hdp:#ffd60a;--c-barre:#ff9a2e;--c-lompret:#ff9a2e;--c-favs:#b39dff;--k-2hdp:#14161a;--k-barre:#14161a;--k-lompret:#14161a;--k-favs:#14161a;color-scheme:dark}
 :root,:root[data-podcast="2hdp"]{--acc:var(--c-2hdp);--accink:var(--k-2hdp)}
 :root[data-podcast="barre"]{--acc:var(--c-barre);--accink:var(--k-barre)}
 :root[data-podcast="lompret"]{--acc:var(--c-lompret);--accink:var(--k-lompret)}
