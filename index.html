@@ -468,7 +468,7 @@ const PODCASTS=[
   dirRe:null, strip:/\s*-\s*La (?:chronique|grosse semaine) de Pierre-Emmanuel Barré.*$/i, raw:""},
  {id:"lompret",name:"La chronique d’Aymeric Lompret",short:"Aymeric Lompret",initials:"AL",
   sub:"Sur Radio Nova",
-  logo:"",
+  logo:"https://assets.voxeus.com/podcasts/assets/images/rs/program/1500/f1f64730559c5f32ef65ab06d12d04d90e20b7f3/3090faa4.png",
   base:"",
   page:"https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret",
   feed:"https://podcasts.nova.fr/radio-nova-la-chronique-daymeric-lompret/feed/rss/website.xml", // à vérifier : adresse du flux RSS
@@ -519,7 +519,7 @@ function setTab(id){
   document.title=p.name+" – Recherche d’épisodes";
   const lg=$("logo"),ph=$("ph");
   const showPh=()=>{lg.hidden=true;ph.hidden=false;ph.textContent=p.initials};
-  if(p.logo){ph.hidden=true;lg.hidden=false;lg.alt="Logo du podcast "+p.name;lg.onerror=showPh;lg.src=p.logo}else showPh();
+  if(p.logo){ph.hidden=true;lg.hidden=false;lg.alt="Logo du podcast "+p.name;lg.onerror=showPh;lg.referrerPolicy="no-referrer";lg.src=p.logo}else showPh();
   $("q").placeholder=p.ph;$("q").value="";$("autostat").textContent=stats[id]||"";
   const imp=$("imp");imp.hidden=id==="favs";
   if(id!=="favs"){
